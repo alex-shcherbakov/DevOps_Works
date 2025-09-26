@@ -1,5 +1,5 @@
 import json
-from DataReader import DataReader
+from Readers.DataReader import DataReader
 
 class JsonReader(DataReader):
     def read_data(self, path):

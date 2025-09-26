@@ -1,5 +1,5 @@
-from JsonReader import JsonReader
-from CsvToJsonConverter import CsvToJsonConverter
+from Readers.JsonReader import JsonReader
+from Converter.CsvToJsonConverter import CsvToJsonConverter
 from StudentFinder import StudentFinder
 
 if __name__ == "__main__":
