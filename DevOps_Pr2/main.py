@@ -1,16 +1,8 @@
-# This is a sample Python script.
+from CsvReader import CsvReader
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    csv_url = "https://informer.com.ua/dut/python/import/st_gt.csv"
+    csv_reader = CsvReader()
+    data = csv_reader.read_data(csv_url)
+    for row in data:
+        print(row)
