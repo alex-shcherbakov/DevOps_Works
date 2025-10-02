@@ -35,7 +35,7 @@ def main():
             full_name=FULL_NAME,
             group_number=GROUP,
             birth_date=date(2003, 10, 31),
-            address="м. Київ, вул. Тихого"
+            address="м. Київ"
         )
         print(f"\n Створено об'єкт СТУДЕНТ: {student_obj.full_name}, {student_obj.group_number}")
 
