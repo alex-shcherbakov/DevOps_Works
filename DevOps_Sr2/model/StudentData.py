@@ -1,6 +1,6 @@
-from Student import Student
-from AcademicPerformance import AcademicPerformanceImpl
-from DesiredPerformance import DesiredPerformance
+from DevOps_Sr2.model.Student import Student
+from DevOps_Sr2.model.AcademicPerformance import AcademicPerformanceImpl
+from DevOps_Sr2.model.DesiredPerformance import DesiredPerformance
 from typing import Dict, Any
 
 

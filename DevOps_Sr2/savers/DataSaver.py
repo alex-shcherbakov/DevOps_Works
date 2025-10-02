@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Any
-from StudentData import StudentData
+from DevOps_Sr2.model.StudentData import StudentData
 
 
 class DataSaver(ABC):

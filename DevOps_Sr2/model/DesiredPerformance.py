@@ -1,6 +1,6 @@
 from typing import List
 
-from AcademicPerformance import AcademicPerformance
+from DevOps_Sr2.model.AcademicPerformance import AcademicPerformance
 
 
 class DesiredPerformance(AcademicPerformance):

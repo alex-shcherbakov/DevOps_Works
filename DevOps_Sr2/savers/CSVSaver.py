@@ -1,6 +1,6 @@
 import csv
 import os
-from StudentData import StudentData
+from DevOps_Sr2.model.StudentData import StudentData
 from DataSaver import DataSaver
 from typing import Dict, Any, List
 
