@@ -21,14 +21,15 @@ catcher = Catcher(canvas, 'blue', score)
 eggs = []
 
 while 1:
-    if random.randint(1, 100) == 1:
-        eggs.append(Egg(canvas, 'red', score))
-    for egg in list(eggs):  # Ітерація по копії списку яєць
-        if egg.draw() == 'hit bottom':
-            eggs.remove(egg)  # Якщо яйце досягло дна - видаляємо
-    tk.update_idletasks()
-    tk.update()
-    time.sleep(0.01)
+	if random.randint(1, 100) == 1:
+		eggs.append(Egg(canvas, 'red', score))
+	for egg in list(eggs):
+		if egg.draw() == 'hit bottom':
+			eggs.remove(egg)
+	catcher.draw()
+	tk.update_idletasks()
+	tk.update()
+	time.sleep(0.01)
 
 tk.update()
 time.sleep(1)
