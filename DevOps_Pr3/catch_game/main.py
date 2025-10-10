@@ -1,6 +1,7 @@
 from tkinter import *
 import random
 import time
+from DevOps_Pr3.catch_game.Score import Score
 
 tk = Tk() # Створює нове вікно Tkinter
 tk.title("Гра: Ловець!")
@@ -15,3 +16,8 @@ canvas.pack()
 # Оновлення та пауза:
 tk.update()
 time.sleep(3)
+
+score = Score(canvas)
+# Оновлення та пауза:
+tk.update()
+time.sleep(1)
