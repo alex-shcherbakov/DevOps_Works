@@ -18,3 +18,11 @@ class Score:
                 self.text,
                 text=f"Спіймав: {self.score} Пропустив: {self.lost}"
             )
+
+    def catched_egg(self):
+        self.score += 1  # Збільшує рахунок спійманих
+        self.show_text()  # Оновлює текст на полотні з новим рахунком
+
+    def lost_egg(self):
+        self.lost += 1  # Збільшує кількість пропущених
+        self.show_text()  # Оновлює текст на полотні з новою кількістю пропущених
