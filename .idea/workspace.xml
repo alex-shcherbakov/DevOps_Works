@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e8a4b2f-671f-4bfd-81b6-6c6a556a2ac5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/DevOps_Pr2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/Converter/CsvToJsonConverter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/Readers/CsvReader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/Readers/DataReader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/Readers/JsonReader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/StudentFinder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/students_data.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
