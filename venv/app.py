@@ -5,19 +5,18 @@ import socket
 
 app = Flask(__name__)
 
-# === Налаштування журналювання ===
+# налаштування журналювання
 logging.basicConfig(
     filename='app.log',
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s'
 )
 
-# === Параметри для UDP-сервера (імітаційного StatsD) ===
+# параметри для UDP-сервера ===
 STATS_SERVER = ("127.0.0.1", 9999)  # IP і порт сервера
 
-
+# Надсилає коротке повідомлення на UDP-сервер
 def send_to_statsd(message: str):
-    """Надсилає коротке повідомлення у UDP-сервер (імітаційний StatsD)."""
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         sock.sendto(message.encode("utf-8"), STATS_SERVER)
@@ -26,7 +25,7 @@ def send_to_statsd(message: str):
         logging.error(f"Не вдалося надіслати повідомлення до StatsD: {e}")
 
 
-# === Глобальні змінні ===
+# глобальні змінні
 start_time = time.time()
 request_count = 0
 
@@ -47,7 +46,6 @@ def home():
 @app.route("/error")
 def error():
     logging.warning("Запит до '/error' — зараз буде помилка!")
-    # Навмисна помилка
     return 1 / 0
 
 
@@ -63,15 +61,15 @@ def status():
     return jsonify(data)
 
 
-# === Глобальний обробник винятків ===
+# глобальний обробник винятків
 @app.errorhandler(Exception)
 def handle_exception(e):
-    """Логування будь-якої помилки + надсилання у StatsD."""
+    #логування будь-якої помилки + надсилання у StatsD.
     logging.exception("Виникла непередбачена помилка у Flask-застосунку")
     send_to_statsd(f"ERROR: {str(e)}")
     return jsonify({"error": "Виникла внутрішня помилка сервера"}), 500
 
 
 if __name__ == "__main__":
-    logging.info("🚀 Flask-застосунок запускається...")
+    logging.info("Flask-застосунок запускається...")
     app.run(debug=True)
