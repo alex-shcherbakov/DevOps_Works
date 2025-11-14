@@ -22,7 +22,7 @@ def send_to_statsd(message: str):
         sock.sendto(message.encode("utf-8"), STATS_SERVER)
         sock.close()
     except Exception as e:
-        logging.error(f"Не вдалося надіслати повідомлення до StatsD: {e}")
+        logging.error(f"Failed to send message to StatsD: {e}")
 
 
 # глобальні змінні
@@ -34,18 +34,18 @@ request_count = 0
 def before_request():
     global request_count
     request_count += 1
-    logging.info(f"Отримано запит №{request_count}")
+    logging.info(f"Received request №{request_count}")
 
 
 @app.route("/")
 def home():
-    logging.info("Запит до '/' — Сервіс працює")
-    return "Сервіс працює"
+    logging.info("Request to '/' — Service is running")
+    return "The service is working"
 
 
 @app.route("/error")
 def error():
-    logging.warning("Запит до '/error' — зараз буде помилка!")
+    logging.warning("Request to '/error' — there will be an error!")
     return 1 / 0
 
 
@@ -57,7 +57,7 @@ def status():
         "uptime_seconds": uptime,
         "requests_handled": request_count
     }
-    logging.info("Запит до '/status' — повертаємо стан застосунку")
+    logging.info("Request to '/status' — return the application status")
     return jsonify(data)
 
 
@@ -65,11 +65,11 @@ def status():
 @app.errorhandler(Exception)
 def handle_exception(e):
     #логування будь-якої помилки + надсилання у StatsD.
-    logging.exception("Виникла непередбачена помилка у Flask-застосунку")
+    logging.exception("An unexpected error occurred in the Flask application.")
     send_to_statsd(f"ERROR: {str(e)}")
-    return jsonify({"error": "Виникла внутрішня помилка сервера"}), 500
+    return jsonify({"error": "An internal server error has occurred."}), 500
 
 
 if __name__ == "__main__":
-    logging.info("Flask-застосунок запускається...")
+    logging.info("Flask application starts...")
     app.run(debug=True)
