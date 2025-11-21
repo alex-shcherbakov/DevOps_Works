@@ -29,6 +29,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('blog:post_detail', args=[self.id])
 
+    slug = models.SlugField(max_length=250, unique_for_date='publish')
+    publish = models.DateTimeField(default=timezone.now)
+
     class Meta:
         ordering = ['-publish']
         indexes = [
