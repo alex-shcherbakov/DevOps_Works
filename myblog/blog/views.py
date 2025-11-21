@@ -1,6 +1,9 @@
 from .models import Post
 from django.shortcuts import render, get_object_or_404
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.paginator import Paginator, EmptyPage, PageNotAnIntegerе, PageNotAnInteger
+from django.views.generic import ListView
+from .forms import EmailPostForm
+
 
 
 def post_list(request):
@@ -27,4 +30,21 @@ def post_detail(request, year, month, day, post):
                              publish__day=day)
 
     return render(request, 'blog/post/detail.html', {'post': post})
+def post_share(request, post_id):
+    post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
+    if request.method == 'POST':
+        form = EmailPostForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            # Надіслати електронний лист з постом
+    else:
+        form = EmailPostForm()
+    return render(request, 'blog/post/share.html', {'post': post, 'form': form})
+
+
+class PostListView(ListView):
+    queryset = Post.published.all()
+    context_object_name = 'posts'
+    paginate_by = 3
+    template_name = 'blog/post/list.html'
 
