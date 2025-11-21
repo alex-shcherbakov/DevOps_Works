@@ -32,6 +32,13 @@ class Post(models.Model):
     slug = models.SlugField(max_length=250, unique_for_date='publish')
     publish = models.DateTimeField(default=timezone.now)
 
+    def get_absolute_url(self):
+        return reverse('blog:post_detail',
+                       args=[self.publish.year,
+                             self.publish.month,
+                             self.publish.day,
+                             self.slug])
+
     class Meta:
         ordering = ['-publish']
         indexes = [
