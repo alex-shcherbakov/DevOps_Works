@@ -1,3 +1,4 @@
+{% load blog_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -10,8 +11,11 @@
         {% block content %}{% endblock %}
     </div>
     <div id="sidebar">
-        <h2>My blog</h2>
-        <p>This is my blog.</p>
+        <h2>Мій блог</h2>
+        <p>Це мій блог.<br>
+        Я вже написав {% total_posts %} статей.
+        </p>
     </div>
 </body>
 </html>
+
