@@ -12,6 +12,8 @@
             Поділитися
         </a>
     </p>
+    <p class="tags">Tags: {{ post.tags.all|join:", " }}</p>
+
     {% with comments.count as total_comments %}
     	<h2>{{ total_comments }} коментар{{ total_comments|pluralize }}</h2>
     {% endwith %}
