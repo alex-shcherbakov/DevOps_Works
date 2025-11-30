@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6826b821-5d04-460f-82c8-94acd726b267" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DevOps_Sr6/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/DevOps_Sr6/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/DevOps_Pr2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DevOps_Sr6/.idea/DevOps_Pr2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DevOps_Sr6/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DevOps_Sr6/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DevOps_Sr6/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DevOps_Sr6/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevOps_Pr2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DevOps_Sr6/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DevOps_Sr6/tests/test_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/DevOps_Sr6/tests/test_app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +35,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests in test_app.py.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
